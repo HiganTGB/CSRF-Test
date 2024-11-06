@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="csrf-form" />
+        <module name="csrf-form (2)" />
+        <module name="csrf-form (1)" />
+        <module name="csrf-restapi-cookies" />
+        <module name="csrf-restapi (1)" />
+        <module name="csrf-restapi" />
+        <module name="1-csrf-form" />
+        <module name="csrf-restapi (3)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="backend-social-network" target="11" />
+      <module name="csrf-jwt-cookies" target="17" />
+      <module name="real-server" target="17" />
+      <module name="registeration-login-system" target="17" />
+      <module name="SameSiteTest" target="17" />
+      <module name="spring-boot-csrf-sample" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="1-csrf-form" options="-parameters" />
+      <module name="SameSiteTest" options="-parameters" />
+      <module name="backend-social-network" options="-parameters" />
+      <module name="csrf-form" options="-parameters" />
+      <module name="csrf-form (1)" options="-parameters" />
+      <module name="csrf-form (2)" options="-parameters" />
+      <module name="csrf-jwt-cookies" options="-parameters" />
+      <module name="csrf-restapi" options="-parameters" />
+      <module name="csrf-restapi (1)" options="-parameters" />
+      <module name="csrf-restapi (3)" options="-parameters" />
+      <module name="csrf-restapi-cookies" options="-parameters" />
+      <module name="real-server" options="-parameters" />
+      <module name="registeration-login-system" options="-parameters" />
+    </option>
+  </component>
+</project>

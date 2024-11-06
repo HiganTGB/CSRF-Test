@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/auth-service/pom.xml" />
+        <option value="$PROJECT_DIR$/real-server/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-csrf-sample-master/pom.xml" />
+        <option value="$PROJECT_DIR$/real-server social/pom.xml" />
+        <option value="$PROJECT_DIR$/registeration-login-system/pom.xml" />
+        <option value="$PROJECT_DIR$/csrf-form/pom.xml" />
+        <option value="$PROJECT_DIR$/csrf-jwt-cookies/pom.xml" />
+        <option value="$PROJECT_DIR$/csrf-form-api/pom.xml" />
+        <option value="$PROJECT_DIR$/csrf-restapi/pom.xml" />
+        <option value="$PROJECT_DIR$/SameSiteTest/pom.xml" />
+        <option value="$PROJECT_DIR$/csrf-form-samesite/pom.xml" />
+        <option value="$PROJECT_DIR$/0.csrf-vulnerable-form/pom.xml" />
+        <option value="$PROJECT_DIR$/0-csrf-restapi-vulnerable/pom.xml" />
+        <option value="$PROJECT_DIR$/1-csrf-restapi-cors/pom.xml" />
+        <option value="$PROJECT_DIR$/1-csrf-restapi-csrf-cookies/pom.xml" />
+        <option value="$PROJECT_DIR$/1.csrf-restapi-cors/pom.xml" />
+        <option value="$PROJECT_DIR$/1-csrf-form/pom.xml" />
+        <option value="$PROJECT_DIR$/3-csrf-form-samesite-xss/pom.xml" />
+        <option value="$PROJECT_DIR$/2-csrf-form-samesite/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/SameSiteTest/pom.xml" />
+        <option value="$PROJECT_DIR$/csrf-form-api/pom.xml" />
+        <option value="$PROJECT_DIR$/csrf-jwt-cookies/pom.xml" />
+        <option value="$PROJECT_DIR$/real-server social/pom.xml" />
+        <option value="$PROJECT_DIR$/real-server/pom.xml" />
+        <option value="$PROJECT_DIR$/registeration-login-system/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-csrf-sample-master/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

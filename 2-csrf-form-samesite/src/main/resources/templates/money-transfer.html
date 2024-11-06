@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <title>Money Transfer</title>
+</head>
+<body>
+<h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+<h2>Money Transfer</h2>
+<form th:action="@{/transfer}"  method="post">
+    <label for="recipientUsername">Recipient Username:</label>
+    <input type="text" name="recipientUsername" id="recipientUsername" required>
+    <br>
+    <label for="amount">Amount:</label>
+    <input type="number" name="amount" id="amount" min="0" required>
+    <br>
+    <button type="submit">Transfer</button>
+</form>
+</body>
+</html>

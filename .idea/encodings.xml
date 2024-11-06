@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/0-csrf-restapi-vulnerable/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/0.csrf-vulnerable-form/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/1-csrf-form/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/1-csrf-restapi-csrf-cookies/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/1.csrf-restapi-cors/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2-csrf-form-samesite/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/3-csrf-form-samesite-xss/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SameSiteTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/csrf-form-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/csrf-jwt-cookies/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/csrf-restapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/real-server social/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/real-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/registeration-login-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-csrf-sample-master/src/main/java" charset="UTF-8" />
+  </component>
+</project>
