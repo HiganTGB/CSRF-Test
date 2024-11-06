@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CSRF.iml" filepath="$PROJECT_DIR$/CSRF.iml" />
-      <module fileurl="file://$PROJECT_DIR$/csrf frontend/csrf frontend.iml" filepath="$PROJECT_DIR$/csrf frontend/csrf frontend.iml" />
       <module fileurl="file://$PROJECT_DIR$/frontendTest.iml" filepath="$PROJECT_DIR$/frontendTest.iml" />
     </modules>
   </component>

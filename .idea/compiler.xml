@@ -11,7 +11,6 @@
         <module name="csrf-form (1)" />
         <module name="csrf-restapi-cookies" />
         <module name="csrf-restapi (1)" />
-        <module name="csrf-restapi" />
         <module name="1-csrf-form" />
         <module name="csrf-restapi (3)" />
       </profile>
@@ -19,6 +18,7 @@
     <bytecodeTargetLevel>
       <module name="backend-social-network" target="11" />
       <module name="csrf-jwt-cookies" target="17" />
+      <module name="csrf-restapi" target="17" />
       <module name="real-server" target="17" />
       <module name="registeration-login-system" target="17" />
       <module name="SameSiteTest" target="17" />
