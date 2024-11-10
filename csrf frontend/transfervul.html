@@ -28,7 +28,7 @@
         const recipientUsername = formData.get('recipientUsername');
         const amount = formData.get('amount');
 
-        axios.post('http://banklord.localhost:11000/transfer', {
+        axios.post('http://bank.banklord.localhost:11000/transfer', {
             receiver: recipientUsername,
             amount: amount
         },{ headers: {

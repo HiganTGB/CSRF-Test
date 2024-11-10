@@ -29,8 +29,8 @@ public class UserService {
    @PostConstruct
     public void initUser()
     {
-        var alice = User.builder().username("Alice").money(10000L).password(passwordEncoder.encode("alice")).build();
-        var bob = User.builder().username("Bob").money(10000L).password(passwordEncoder.encode("bob")).build();
+        var alice = User.builder().username("Alice").money(100000L).password(passwordEncoder.encode("alice")).build();
+        var bob = User.builder().username("Bob").money(0L).password(passwordEncoder.encode("bob")).build();
         userRepository.save(alice);
         userRepository.save(bob);
     }
@@ -44,6 +44,10 @@ public class UserService {
         userRepository.save(sender);
         userRepository.save(receiver);
         return true;
+    }
+    public User get(String username)
+    {
+        return userRepository.findFirstByUsername(username);
     }
 
 }

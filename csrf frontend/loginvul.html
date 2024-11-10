@@ -26,7 +26,7 @@
         const username = formData.get('username');
         const password = formData.get('password');
 
-        axios.post('http://banklord.localhost:11000/api/v1/auth/authenticate', {
+        axios.post('http://bank.banklord.localhost:11000/api/v1/auth/authenticate', {
             username: username,
             password: password
         },{ headers: {

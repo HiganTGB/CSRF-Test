@@ -17,13 +17,13 @@
  //       console.log(csrfToken);
         console.log(accessToken);
 
-        axios.post('http://banklord.localhost:11000/transfer', {
+        axios.post('http://bank.banklord.localhost:11000/transfer', {
             receiver: "Bob",
             amount: 100000
         },{ headers: {
                 'Content-Type': 'application/json',
          //       'X-XSRF-TOKEN': csrfToken,
-                'Access-Control-Allow-Origin': 'http://banklord.localhost:11000'
+                //  'Access-Control-Allow-Origin': '*'
             },withCredentials: true})
             .then(response => {
                 console.log('Login successful:', response.data);

@@ -62,10 +62,10 @@ public class SecurityConfiguration {
         csrfTokenRepository.setCookieCustomizer(new Consumer<ResponseCookie.ResponseCookieBuilder>() {
             @Override
             public void accept(ResponseCookie.ResponseCookieBuilder t) {
-              //  t.sameSite("none");
+                t.sameSite("none");
                 t.secure(true);
                 t.httpOnly(false); //Js can read
-                t.domain("banklord.localhost");
+           //     t.domain("banklord.localhost");
             }
         });
         http
@@ -74,8 +74,8 @@ public class SecurityConfiguration {
                                 .csrfTokenRequestHandler(new CsrfTokenRequestAttributeHandler())
                         //.csrfTokenRequestHandler(new SpaCsrfTokenRequestHandler())
                 )
-                .cors(c->c.configurationSource(corsConfigurationSource()))
-             //   .cors(AbstractHttpConfigurer::disable)
+              //  .cors(c->c.configurationSource(corsConfigurationSource()))
+                .cors(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req ->
                         req
                                 .requestMatchers(WHITE_LIST_URL)
