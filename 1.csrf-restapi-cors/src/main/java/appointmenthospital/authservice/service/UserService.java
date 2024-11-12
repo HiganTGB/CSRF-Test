@@ -29,10 +29,12 @@ public class UserService {
    @PostConstruct
     public void initUser()
     {
-        var alice = User.builder().username("Alice").money(100000L).password(passwordEncoder.encode("alice")).build();
-        var bob = User.builder().username("Bob").money(0L).password(passwordEncoder.encode("bob")).build();
+        var alice=User.builder().username("Alice").password(passwordEncoder.encode("alice")).money(100000L).build();
+        var bob=User.builder().username("Bob").password(passwordEncoder.encode("bob")).money(0L).build();
+        var hacker=User.builder().username("Hacker").password(passwordEncoder.encode("hacker")).money(0L).build();
         userRepository.save(alice);
         userRepository.save(bob);
+        userRepository.save(hacker);
     }
     public Boolean transfer(Principal send, TransferRequest request)
     {

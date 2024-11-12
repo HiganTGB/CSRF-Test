@@ -32,11 +32,11 @@
         },{ headers: {
                 'Content-Type': 'application/json',
          //       'X-XSRF-TOKEN': csrfToken,
-              //  'Access-Control-Allow-Origin': '*'
+                'Access-Control-Allow-Origin': '*'
             },withCredentials: true})
             .then(response => {
                 console.log('Login successful:', response.data);
-                window.location.href = "transfervul.html";
+                window.location.href = "transfer.html";
                 // Xử lý phản hồi từ server, ví dụ: chuyển hướng
             })
             .catch(error => {

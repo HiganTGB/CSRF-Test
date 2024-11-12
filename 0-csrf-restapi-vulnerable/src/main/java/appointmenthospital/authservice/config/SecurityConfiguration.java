@@ -69,6 +69,7 @@ public class SecurityConfiguration {
 //                .cors(Customizer.withDefaults())
                 .csrf(AbstractHttpConfigurer::disable)
                 .cors(AbstractHttpConfigurer::disable)
+              //  .cors(c->c.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(req ->
                         req
                                 .requestMatchers(WHITE_LIST_URL)
@@ -96,7 +97,7 @@ public class SecurityConfiguration {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("*"));
+        configuration.setAllowedOrigins(List.of("/**"));
         configuration.setAllowedMethods(List.of("*"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);

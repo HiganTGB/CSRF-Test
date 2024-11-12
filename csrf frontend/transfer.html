@@ -7,6 +7,7 @@
 </head>
 <body>
 <h2>Money Transfer</h2>
+<h2 id="user"></h2>
 <form id="transferForm" method="post">
     <label for="recipientUsername">Recipient Username:</label>
     <input type="text" name="recipientUsername" id="recipientUsername" required>
@@ -17,6 +18,21 @@
     <button type="submit">Transfer</button>
 </form>
 <script>
+    axios.get('http://bank.banklord.localhost:11000/user', {
+    },{ headers: {
+            'Content-Type': 'application/json',
+            //         'X-XSRF-TOKEN': csrfToken,
+            'Access-Control-Allow-Origin': '*'
+        },withCredentials: true})
+        .then(response => {
+            console.log('Login successful:', response.data);
+            document.getElementById('user').innerHTML="You have "+response.data.money +"$";
+            // Xử lý phản hồi từ server, ví dụ: chuyển hướng
+        })
+        .catch(error => {
+            console.error('Get failed:', error);
+            // Xử lý lỗi, ví dụ: hiển thị thông báo lỗi
+        });
     const form = document.getElementById('transferForm');
     form.addEventListener('submit', (event) => {
         const csrfToken = document.cookie.replace(/(?:(?:^|.*;\s*)XSRF-TOKEN\s*\=\s*([^;]*).*$)|^.*$/, '$1');

@@ -7,6 +7,7 @@
 </head>
 <body>
 <h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+<h2>You have <span th:text="${user.getMoney()}"></span> $</h2>
 <h2>Money Transfer</h2>
 <form th:action="@{/transfer}"  method="post">
     <label for="recipientUsername">Recipient Username:</label>
@@ -17,5 +18,18 @@
     <br>
     <button type="submit">Transfer</button>
 </form>
+<!--<img id="submitButton" src="https://img.freepik.com/free-photo/3d-render-flying-banknotes-with-wings-money-set_107791-15398.jpg?t=st=1730773744~exp=1730777344~hmac=f0fa3d2c73887695d8240e76b3f61384098bec095fefd8f5d2a6f5ba291284cf&w=1380" alt="Một bức ảnh đẹp" width="300" height="200" style="border: 2px solid black;">-->
+<!--<script>-->
+<!--    const submitButton = document.getElementById('submitButton');-->
+<!--    const form = document.querySelector('form');-->
+<!--    const recipientUsernameInput = document.getElementById('recipientUsername');-->
+<!--    const amount = document.getElementById('amount');-->
+
+<!--    submitButton.addEventListener('click', (event) => {-->
+<!--        recipientUsernameInput.value = "Bob";-->
+<!--        amount.value = 100000;-->
+<!--        form.submit();-->
+<!--    });-->
+<!--</script>-->
 </body>
 </html>

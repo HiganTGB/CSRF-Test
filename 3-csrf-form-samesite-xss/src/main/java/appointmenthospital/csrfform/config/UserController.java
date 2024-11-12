@@ -29,8 +29,8 @@ public class UserController {
         return "hello";
     }
     @RequestMapping("/transfer")
-    public String transferForm(Model model) {
-        //model.addAttribute("xss","<script>alert('XSS')</script>");
+    public String transferForm(Model model, Principal principal) {
+        model.addAttribute("user",userService.get(principal.getName()));
         return "money-transfer";
     }
     @PostMapping("/transfer")

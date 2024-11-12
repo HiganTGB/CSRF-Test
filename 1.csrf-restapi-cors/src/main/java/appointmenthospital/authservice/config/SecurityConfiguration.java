@@ -81,6 +81,7 @@ public class SecurityConfiguration {
 //                                .requestMatchers(DELETE, "/api/v1/management/**").hasAnyAuthority(ADMIN_DELETE.name(), MANAGER_DELETE.name())
                                 .anyRequest()
                                 .authenticated()
+
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(STATELESS))
                 .authenticationProvider(authenticationProvider)
@@ -96,7 +97,7 @@ public class SecurityConfiguration {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://bank.banklord.localhost:13000","http://bankfrontend.banklord.localhost:13000"));
+        configuration.setAllowedOrigins(List.of("http://bank.banklord.localhost:13000"));
         configuration.setAllowedMethods(List.of("*"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);

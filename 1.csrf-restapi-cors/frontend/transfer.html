@@ -21,8 +21,8 @@
     axios.get('http://bank.banklord.localhost:11000/user', {
     },{ headers: {
             'Content-Type': 'application/json',
-            //       'X-XSRF-TOKEN': csrfToken,
-            //  'Access-Control-Allow-Origin': '*'
+          //         'X-XSRF-TOKEN': csrfToken,
+              'Access-Control-Allow-Origin': '*'
         },withCredentials: true})
         .then(response => {
             console.log('Login successful:', response.data);
@@ -53,12 +53,12 @@
                 //  'Access-Control-Allow-Origin': '*'
             },withCredentials: true})
             .then(response => {
-                console.log('Transfer successful:', response.data);
+                console.log('Login successful:', response.data);
                 alert("Transfer success")
                 // Xử lý phản hồi từ server, ví dụ: chuyển hướng
             })
             .catch(error => {
-                console.error('Transfer  failed:', error);
+                console.error('Login failed:', error);
                 // Xử lý lỗi, ví dụ: hiển thị thông báo lỗi
             });
     });

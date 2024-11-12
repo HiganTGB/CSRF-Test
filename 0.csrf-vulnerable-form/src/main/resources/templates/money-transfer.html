@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
-<h2>You have <span th:text="${user.getMoney()}"></span></h2>
+<h2>You have <span th:text="${user.getMoney()}"></span> $</h2>
 <h2>Money Transfer</h2>
 <form th:action="@{/transfer}"  method="post">
     <label for="recipientUsername">Recipient Username:</label>

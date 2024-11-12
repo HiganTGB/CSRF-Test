@@ -19,13 +19,11 @@ public class UserController {
     private final UserService userService;
     @PostMapping(path ="/transfer", consumes = "application/json", produces = "application/json")
     @ResponseBody
-    @CrossOrigin("http://localhost:13000")
  //   @ResponseStatus(HttpStatus.OK)
     public Boolean transfer(@RequestBody TransferRequest request, Principal principal) {
         return userService.transfer(principal,request);
     }
     @GetMapping("/user")
-    @CrossOrigin("http://localhost:13000")
     public User transferForm(Principal principal) {
         return userService.get(principal.getName());
     }
